@@ -1,0 +1,11 @@
+[project]
+name = "fastapi-mcp-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.12",
+    "fastapi-mcp>=0.2.0",
+    "pydantic>=2.11.3",
+]
