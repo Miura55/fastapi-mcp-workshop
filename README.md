@@ -34,7 +34,7 @@ uv venv
 以下のコマンドでアプリケーションを起動します。
 
 ```bash
-uv run main.py
+uv run uvicorn main:api.app --host 0.0.0.0 --reload
 ```
 
 ## mcp-proxyを使って接続
