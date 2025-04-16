@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Optional
-from tinydb import TinyDB
+from tinydb import TinyDB, Query
 
 app = FastAPI(
     title="MCP API",
@@ -34,3 +34,21 @@ async def create_item(item: Item):
     """
     db.insert(item.model_dump())
     return item
+
+
+@app.put("/items/{item_id}", response_model=Item, tags=["items"], operation_id="update_item")
+async def update_item(item_id: int, item: Item):
+    """
+    Update an existing item.
+    """
+    db.update(item.model_dump(), Query().id == item_id)
+    return item
+
+
+@app.delete("/items/{item_id}", tags=["items"], operation_id="delete_item")
+async def delete_item(item_id: int):
+    """
+    Delete an item.
+    """
+    db.remove(Query().id == item_id)
+    return {"message": "Item deleted"}
