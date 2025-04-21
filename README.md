@@ -2,7 +2,7 @@
 このレポジトリはMCP(Model Context Protocol)をFastAPIで実装するためのワークショップ用のサンプルコードです。
 
 ## セットアップ
-以下のコマンドを実行して、Pythonのパッケージ管理ツールのuv(https://docs.astral.sh/uv/getting-started/installation/)をインストールします。
+以下のコマンドを実行して、Pythonのパッケージ管理ツールのuv (https://docs.astral.sh/uv/getting-started/installation/) をインストールします。
 
 ### MacOS/Linux
 
